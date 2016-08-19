@@ -1,35 +1,42 @@
-algopractice
-
+# algopractice
 Practice algorithms.
 
-For users
+## For users
+### Usage
 
-Usage
+1. Fork and clone down Broadstrokes/algopractice
+2. `bower install`
+3. Complete prompt(s)
+5. Run tests
 
-Fork and clone down Dansajjad/algopractice
-bower install
-Complete prompt(s) in algorithms.js
-
+~~~
 
 - Attempt these problems without using the internet first! 
-- These should be fundamental building blocks to your knowledge
 
-To run the tests
+~~~
 
-To run all uncommented prompts, run the command:
+### To run the tests
+To run all uncommented prompts, from inside the root folder run the command:
 
-open index.html in your browser
+`open index.html`
 
-Updates
+### Updates
+In order to stay updated add this repo as the `remote upstream`. 
+`git remote add upstream https://github.com/Broadstrokes/algopractice.git`
 
-In order to stay updated add this repo as the remote upstream.
+To check if the remote has been added run the following: 
+`git remote -v`
 
-Bug reporting
+To pull updates run the following command from the root: 
+`git pull upstream master`
 
-Report bugs using GitHub Issues.
-Access the issues for algopractice via its repo page, at the top next to the "Pull Requests" tab.
-Make sure to add the Bug label to your issue.
-Contributions
+### Bug reporting
+ - Report bugs using GitHub Issues. 
+ - Access the issues for algopractice via its repo page, at the top next to the "Pull Requests" tab. 
+ - Make sure to add the `Bug` label to your issue.
 
-To contribute make a GitHub Issue with the Enhancement label on it.
-Clearly explain your contribution
+### Contributions
+
+ - To contribute make a GitHub Issue with the `Enhancement` label on it. 
+ - Clearly explain your contribution
+ - To make a pull request, from your fork page select Pull Requests and then create a New pull request. After creating the pull finalize by clicking Send pull request.
