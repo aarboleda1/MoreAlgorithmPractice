@@ -13,9 +13,4 @@ var factorialize = function (num) {
 //it should take a string and repeat it a number of times
 var repeat = function(str, count) {
   // your code goes here
-  var phrase = ''
-  for(var i = 0; i < count; i++){
-    phrase += str;
-  }
-  return phrase;
 };
