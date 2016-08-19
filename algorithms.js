@@ -1,6 +1,11 @@
 /*! algorithms v0.0.0 - MIT license */
 'use strict';
 
-var algorithms = function () {
-  // your code goes here
+//Reverse the provided string.
+var reverseString = function (str) {
 }
+
+//Factorialize a Number
+var factorialize = function (num) {
+  // your code goes here
+}  
