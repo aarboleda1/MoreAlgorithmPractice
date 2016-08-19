@@ -8,4 +8,9 @@ var reverseString = function (str) {
 //Factorialize a Number
 var factorialize = function (num) {
   // your code goes here
-}  
+}
+
+//it should take a string and repeat it a number of times
+var repeat = function(str, count) {
+  // your code goes here
+};
