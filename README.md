@@ -21,7 +21,8 @@ To run all uncommented prompts, from inside the root folder run the command:
 `open index.html`
 
 ### Updates
-In order to stay updated add this repo as the `remote upstream`. 
+In order to stay updated add this repo as the *remote upstream*. 
+
 `git remote add upstream https://github.com/Broadstrokes/algopractice.git`
 
 To check if the remote has been added run the following: 
