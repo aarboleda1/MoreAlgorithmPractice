@@ -47,3 +47,20 @@ describe('factorialize', function () {
 
   // Add more assertions here
 });
+
+describe('getSum', function () {
+  'use strict';
+
+  it('exists', function () {
+    expect(getSum).to.be.a('function');
+  });
+
+  it('should calculate the sum without using + or -', () => {
+    expect(getSum(1,2)).to.equal(3);
+    expect(getSum(-4,5)).to.equal(1);
+    expect(getSum(4,6)).to.equal(10);  
+    expect(getSum(-4,-4)).to.equal(-8);
+  });
+
+  // Add more assertions here
+});
