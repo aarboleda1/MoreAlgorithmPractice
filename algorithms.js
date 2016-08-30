@@ -3,10 +3,12 @@
 
 // Reverse the provided string.
 const reverseString = function (str) {
+  // your code goes here
 };
 
 // Reverse only the vowels in the provided string.
 const reverseVowels = function (str) {
+  // your code goes here
 };
 
 // Factorialize a Number
@@ -25,9 +27,17 @@ Given an array of integers, return indices of the two numbers such that they add
 Because arr[0] + arr[1] = 2 + 7 = 9, return [0, 1].
 */
 const twoSum = function (arr, tgt) {
+  // your code goes here
 };
 
+/*
+Given an array of integers, every element appears twice except for one. Find that single one.
+
+Note:
+Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+*/
 const singleNumber = function(arr) {
+  // your code goes here
 };
 
 //it should take a string and repeat it a number of times
