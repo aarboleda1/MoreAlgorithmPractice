@@ -29,3 +29,8 @@ const twoSum = function (arr, tgt) {
 
 const singleNumber = function(arr) {
 };
+
+//it should take a string and repeat it a number of times
+const repeat = function(str, count) {
+  // your code goes here
+};
