@@ -1,0 +1,42 @@
+// {
+//   "extends": "eslint-config-airbnb",
+//   "env": {
+//     "browser": true,
+//     "mocha": true,
+//     "node": true
+//   },
+//   "parserOptions": {
+//     "ecmaVersion": 6,
+//     "sourceType": "module",
+//     "ecmaFeatures": {
+//       "jsx": true
+//     }
+//   },
+//   "rules": {
+//     "react/jsx-uses-react": 2,
+//     "react/jsx-uses-vars": 2,
+//     "react/react-in-jsx-scope": 2,
+//     "comma-dangle": 0,  // not sure why airbnb turned this on. gross!
+//     "indent": [2, 2, {"SwitchCase": 1}],
+//     "spaced-comment": 0,
+//     "no-redeclare": 0,
+//     "no-console": 2,
+
+//     //Temporarirly disabled due to a possible bug in babel-eslint (todomvc example)
+//     "block-scoped-var": 0,
+//     // Temporarily disabled for test/* until babel/babel-eslint#33 is resolved
+//     "padded-blocks": 0
+//   },
+//   "plugins": [
+//     "react"
+//   ]
+// }
+
+// Use this file as a starting point for your project's .eslintrc.
+// Copy this file, and add rule overrides as needed.
+{
+  "extends": "airbnb",
+  "rules": {
+    "func-names": "never"
+  }
+}

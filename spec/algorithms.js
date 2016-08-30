@@ -16,6 +16,20 @@ describe('reverseString', function () {
   // Add more assertions here
 });
 
+describe('reverseVowels', function () {
+  'use strict';
+
+  it('exists', function () {
+    expect(reverseVowels).to.be.a('function');
+
+  });
+
+  it('should reverse only the vowels in a given string', () => {
+    expect(reverseVowels("hello")).to.equal("holle");
+    expect(reverseString("leetcode")).to.equal("leotcede");  
+  });
+});
+
 
 describe('factorialize', function () {
   'use strict';
