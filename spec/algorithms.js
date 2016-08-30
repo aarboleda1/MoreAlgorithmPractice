@@ -74,9 +74,9 @@ describe('twoSum', function () {
   });
 
   it('should find the indices of the 2 values that sum to target', () => {
-    expect(twoSum([2, 7, 11, 15], 9)).to.equal([0,1]);
-    expect(twoSum([3,2,4], 6)).to.equal([1,2]);
-    expect(twoSum([0,4,3,0], 0)).to.equal([0,3]);
+    expect(twoSum([2, 7, 11, 15], 9)).to.deep.equal([0,1]);
+    expect(twoSum([3,2,4], 6)).to.deep.equal([1,2]);
+    expect(twoSum([0,4,3,0], 0)).to.deep.equal([0,3]);
   });  
   
 })
