@@ -23,7 +23,7 @@ const getSum = function (a, b) {
   // your code goes here
 };
 
- /*
+/*
 Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution. Example: Given arr = [2, 7, 11, 15], target = 9,
 Because arr[0] + arr[1] = 2 + 7 = 9, return [0, 1].
 */
@@ -47,11 +47,12 @@ const repeat = function (str, count) {
 };
 
 /*
+ ***THIS MIGHT BE AN OUT OF SCOPE PROBLEM IF YOU ARE A FULCRUM STUDENT***
  Create data structuce called Union-Find. 
- Given a set of 'n' objects.
- See test cases to develop the data structure
+ Given a set of 'n' objects.  The interface is as follows
 ・Union command: connect two objects.
-・Find/connected query: is there a path connecting the two objects?
+・Connected query: is there a path connecting the two objects?
+ See test cases to develop the data structure
 */
 
 const UF = function (n) {
