@@ -19,7 +19,8 @@ const factorialize = function (num) {
 /*
 Calculate the sum of two integers a and b, but you are not allowed to use the operator + and -. Example: Given a = 1 and b = 2, return 3.
 */
-const getSum = function(a, b) {    
+const getSum = function (a, b) {    
+  // your code goes here
 };
 
  /*
@@ -36,11 +37,23 @@ Given an array of integers, every element appears twice except for one. Find tha
 Note:
 Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
 */
-const singleNumber = function(arr) {
+const singleNumber = function (arr) {
   // your code goes here
 };
 
 //it should take a string and repeat it a number of times
-const repeat = function(str, count) {
+const repeat = function (str, count) {
+  // your code goes here
+};
+
+/*
+ Create data structuce called Union-Find. 
+ Given a set of 'n' objects.
+ See test cases to develop the data structure
+・Union command: connect two objects.
+・Find/connected query: is there a path connecting the two objects?
+*/
+
+const UF = function (n) {
   // your code goes here
 };
