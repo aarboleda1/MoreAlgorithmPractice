@@ -187,3 +187,18 @@ describe('isPalindrome', function () {
   });
 }); //isPalindrome
 
+describe('isPermutation', function () {
+  'use strict';
+
+  it('exists', function () {
+    expect(isPermutation).to.be.a('function');
+  });
+
+  it('should return true if a string is a palindrome', () => {
+    expect(isPermutation('abc', 12)).to.equal("Argument is not a string");
+    expect(isPermutation('abcddeee', 'abcddeeeeee')).to.be.false;
+    expect(isPermutation('abcddeeeff', 'fdbef')).to.be.true;
+    expect(isPermutation('abcddeeeff', 'fdbefz')).to.be.false;
+    expect(isPermutation('abcddeee', 'dabb')).to.be.false;
+  });
+}); //isPermutation

@@ -75,3 +75,12 @@ const isUnique = function (s) {
 const isPalindrome = function (s) {
   // your code goes here
 };
+
+/*
+  Test if string 2 is a permutation of string 1
+  Return a boolean value 
+*/
+
+const isPermutation = function (s1, s2) {
+  // your code goes here
+}
