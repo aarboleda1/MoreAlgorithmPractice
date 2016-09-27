@@ -171,3 +171,19 @@ describe('isUnique', function () {
   });
 }); //isUnique
 
+
+describe('isPalindrome', function () {
+  'use strict';
+
+  it('exists', function () {
+    expect(isPalindrome).to.be.a('function');
+  });
+
+  it('should return true if a string is a palindrome', () => {
+    expect(isPalindrome('abcde')).to.be.false;
+    expect(isPalindrome("racecar")).to.be.true;
+    expect(isPalindrome("zoro")).to.be.false;
+    expect(isPalindrome(123)).to.equal("Argument is not a string");
+  });
+}); //isPalindrome
+

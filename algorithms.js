@@ -66,3 +66,12 @@ const UF = function (n) {
 const isUnique = function (s) {
   // your code goes here
 };
+
+/*
+  Test if a string is a palindrome
+  Return a boolean value 
+*/
+
+const isPalindrome = function (s) {
+  // your code goes here
+};
