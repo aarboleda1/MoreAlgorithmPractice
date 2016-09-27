@@ -83,4 +83,13 @@ const isPalindrome = function (s) {
 
 const isPermutation = function (s1, s2) {
   // your code goes here
-}
+};
+
+/*
+  Test if a string has a permutation which is a palindrome
+  Return a boolean value 
+*/
+
+const hasPalindromePermutation = function (str) {
+  // your code goes here
+};

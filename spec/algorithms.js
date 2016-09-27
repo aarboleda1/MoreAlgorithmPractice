@@ -202,3 +202,26 @@ describe('isPermutation', function () {
     expect(isPermutation('abcddeee', 'dabb')).to.be.false;
   });
 }); //isPermutation
+
+describe('hasPalindromePermutation', function () {
+  'use strict';
+
+  it('exists', function () {
+    expect(hasPalindromePermutation).to.be.a('function');
+  });
+
+  it('should return true if a string is a palindrome', () => {
+    expect(hasPalindromePermutation(123)).to.equal("Argument is not a string");
+    expect(hasPalindromePermutation('Tacocoa')).to.be.true;
+    expect(hasPalindromePermutation('carrace')).to.be.true;
+    expect(hasPalindromePermutation('abccba')).to.be.true;
+    expect(hasPalindromePermutation('abcdcba')).to.be.true;
+    expect(hasPalindromePermutation('abcdecba')).to.be.false;
+    expect(hasPalindromePermutation('bcdefcb')).to.be.false;
+    expect(hasPalindromePermutation('civic')).to.be.true;
+    expect(hasPalindromePermutation('ivicc')).to.be.true;
+    expect(hasPalindromePermutation('civil')).to.be.false;
+    expect(hasPalindromePermutation('livci')).to.be.false;
+
+  });
+}); //hasPalindromePermutation
