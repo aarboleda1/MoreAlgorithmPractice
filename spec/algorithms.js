@@ -155,3 +155,19 @@ describe('Union-Find', function () {
   });
 
 }); //UF
+
+describe('isUnique', function () {
+  'use strict';
+
+  it('exists', function () {
+    expect(isUnique).to.be.a('function');
+  });
+
+  it('should return true if a string has all unique characters', () => {
+    expect(isUnique('abcde')).to.be.true;
+    expect(isUnique("bubble")).to.be.false;
+    expect(isUnique("zoro")).to.be.false;
+    expect(isUnique(123)).to.equal("Argument is not a string");
+  });
+}); //isUnique
+

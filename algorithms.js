@@ -57,3 +57,12 @@ const repeat = function (str, count) {
 const UF = function (n) {
   // your code goes here
 };
+
+/*
+  Test if a string has all unique characters
+  Return a boolean value 
+*/
+
+const isUnique = function (s) {
+  // your code goes here
+};
