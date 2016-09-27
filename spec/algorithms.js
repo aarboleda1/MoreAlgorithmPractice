@@ -97,3 +97,61 @@ describe('repeat', function () {
     expect(repeat("abc", 1)).to.equal("abc");
   });
 }); //repeat
+
+describe('Union-Find', function () {
+  'use strict';
+
+  let unionFind;
+  let num;
+
+  before(function() {
+    // runs before all tests in this block
+    num = 10;
+    unionFind = new UF(num);    
+  });
+  
+  it('exists', function () {
+    expect(UF).to.be.a('function');
+  });
+
+  it('should have an id', function() {
+    expect(unionFind).to.have.property('id');
+  });
+
+  it('should have methods named "union" and "connected"', function () {
+    expect(unionFind.union).to.be.a('function');
+    expect(unionFind.connected).to.be.a('function');
+  });
+
+  it('should populate id array when initialized', function () {
+    console.log(unionFind);
+    expect(unionFind.id.length).to.equal(num);
+    expect(unionFind.id[2]).to.equal(2);    
+    expect(unionFind.id[6]).to.equal(6);
+  });
+
+  it('should create a union', function () {
+    unionFind.union(2,3);
+    // expect(unionFind.findRoot(2)).to.equal(3);    
+    // expect(unionFind.findRoot(3)).to.equal(3);    
+    expect(unionFind.connected(2,3)).to.be.true;
+    unionFind.union(2,4);
+    // expect(unionFind.findRoot(2)).to.equal(4);    
+    expect(unionFind.connected(2,4)).to.be.true;
+    expect(unionFind.connected(3,4)).to.be.true;
+  });
+
+  it('should detect a connection', function () {
+    unionFind.union(3,6);
+    unionFind.union(5,9);
+
+    expect(unionFind.connected(2,4)).to.be.true;
+    expect(unionFind.connected(2,6)).to.be.true;
+    expect(unionFind.connected(4,6)).to.be.true;
+    expect(unionFind.connected(9,5)).to.be.true;
+    expect(unionFind.connected(2,5)).to.be.false;
+    expect(unionFind.connected(3,9)).to.be.false;
+    expect(unionFind.connected(1,8)).to.be.false;
+  });
+
+}); //UF
