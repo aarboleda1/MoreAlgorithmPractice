@@ -1,5 +1,5 @@
 # algopractice
-Practice algorithms.
+Practice algorithms.  Solutions are in solutions.js
 
 ## For users
 ### Usage
@@ -11,8 +11,13 @@ Practice algorithms.
 
 ~~~
 
-- Attempt these problems without using the internet first! 
-
+- Attempt these problems without using solutions.js first!
+- Pseudo-code how you will approach the problem 
+- If you cannot figure out what the prompt is asking, look at the test cases
+- If that still doesn't help message me on slack
+- If you've spent 30 minutes on a problem, to prevent frustration, 
+move on to the next problem. Come back to it later. Research the problem.
+- Look at the solution
 ~~~
 
 ### To run the tests
