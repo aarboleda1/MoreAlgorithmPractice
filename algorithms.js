@@ -93,3 +93,12 @@ const isPermutation = function (s1, s2) {
 const hasPalindromePermutation = function (str) {
   // your code goes here
 };
+
+/*
+  Given an array with sub-arrays, all of which hold numbers, return the sum
+  of all the numbers in the array  
+*/
+
+const arraySum = function (arr) {
+  // your code goes here
+};

@@ -222,6 +222,19 @@ describe('hasPalindromePermutation', function () {
     expect(hasPalindromePermutation('ivicc')).to.be.true;
     expect(hasPalindromePermutation('civil')).to.be.false;
     expect(hasPalindromePermutation('livci')).to.be.false;
-
   });
 }); //hasPalindromePermutation
+
+describe('arraySum', function () {
+  'use strict';
+
+  it('exists', function () {
+    expect(arraySum).to.be.a('function');
+  });
+
+  it('should sum total of all integers in the array and subarrays', () => {
+    expect(arraySum([[1],[2,3],[[4]],5,6])).to.equal(21);
+    expect(arraySum([[12,[[34],[56]],78]]).to.equal(180);
+    expect(arraySum([3,[0,[34,[7,[18]]]]]).to.equal(62);
+  });
+}); //arraySum
