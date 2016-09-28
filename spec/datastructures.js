@@ -4,11 +4,9 @@ describe('Stack', function () {
   'use strict';
 
   let myStack;
-  // let num;
 
   before(function() {
     // runs before all tests in this block
-    // num = 10;
     myStack = new Stack();    
   });
 
