@@ -88,3 +88,95 @@ describe('Stack', function () {
   });
 
 }); //Stack
+
+
+describe('Queue', function () {
+  'use strict';
+
+  let myQueue;
+
+  before(function() {
+    // runs before all tests in this block
+    myQueue = new Queue();    
+  });
+
+  it('exists', function () {
+    expect(Queue).to.be.a('function');
+  });
+
+  xit('should have an _storage, _size, minArray property', function() {
+    expect(myQueue).to.have.property('_storage');
+    expect(myQueue).to.have.property('_size');
+    expect(myQueue).to.have.property('minArray');
+  });
+
+  it('should have methods named "enqueue", "dequeue", "isEmpty", "peek", "size" and "min"', function () {
+    expect(myQueue.enqueue).to.be.a('function');
+    expect(myQueue.dequeue).to.be.a('function');
+    expect(myQueue.peek).to.be.a('function');
+    expect(myQueue.min).to.be.a('function');
+    expect(myQueue.isEmpty).to.be.a('function');
+  });
+
+  it('should return "true" if isEmpty is called on an empty list', function () {
+    expect(myQueue.isEmpty()).to.be.true;
+  });
+
+
+  it('should return "Queue is empty" if peek is called on empty list', function () {
+    expect(myQueue.peek()).to.equal("Queue is empty!");
+  });
+
+  it('should enqueue items on to the Queue', function () {
+    myQueue.enqueue(1);
+    expect(myQueue.size()).to.equal(1);
+    myQueue.enqueue(2);
+    expect(myQueue.size()).to.equal(2);
+  });
+
+  it('should dequeue the last item added', function () {
+    //last item added was 2
+    myQueue.enqueue(3);
+    myQueue.enqueue(4);
+    expect(myQueue.dequeue()).to.equal(1);
+    expect(myQueue.size()).to.equal(3);
+    expect(myQueue.dequeue()).to.equal(2);
+    expect(myQueue.size()).to.equal(2);
+  });
+
+  it('should return "Queue is empty!" if popping an empty list', function () {
+    expect(myQueue.dequeue()).to.equal(3);
+    expect(myQueue.dequeue()).to.equal(4);
+    expect(myQueue.isEmpty()).to.be.true;
+    expect(myQueue.dequeue()).to.equal("Queue is empty!");
+  });
+
+  xit('should return the minimum when min is called', function () {
+    myQueue.enqueue(3);
+    myQueue.enqueue(5);
+    expect(myQueue.min()).to.equal(3);
+    expect(myQueue.peek()).to.equal(5);
+    myQueue.enqueue(2);
+    expect(myQueue.min()).to.equal(2);
+    myQueue.enqueue(8);
+    expect(myQueue.peek()).to.equal(8);
+    expect(myQueue.min()).to.equal(2);
+    myQueue.enqueue(2);
+    myQueue.enqueue(1);
+    expect(myQueue.min()).to.equal(1);
+    myQueue.dequeue(); //pops 1
+    expect(myQueue.min()).to.equal(2);
+    myQueue.dequeue(); //pops 2
+    expect(myQueue.min()).to.equal(2);
+    myQueue.dequeue(); //pops 8
+    expect(myQueue.min()).to.equal(2);
+    myQueue.dequeue(); //pops 2
+    expect(myQueue.min()).to.equal(3);
+    myQueue.dequeue(); //pops 5
+    expect(myQueue.min()).to.equal(3);            
+    myQueue.dequeue(); //pops 3
+    expect(myQueue.isEmpty()).to.be.true;    
+    expect(myQueue.min()).to.equal("Queue is empty!");
+  });
+
+}); //Queue

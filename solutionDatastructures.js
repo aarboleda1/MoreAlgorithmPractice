@@ -2,9 +2,6 @@
 'use strict';
 
 // Create the Stack data structure
-
-
-
 const Node = function(val) {
   this.value = val;
   this.next = null;
@@ -99,4 +96,48 @@ Stack using an object as storage
   };
 */
 
+
+/*
+ Create the Queue data structure. Implement it using 2 stacks.  
+ It should have the following methods:
+ enqueue, dequeue, isEmpty, peek, min
+*/
+
+const Queue = function () {
+  // your code goes here
+  var stack1 = new Stack();
+  var stack2 = new Stack();
+
+  this.enqueue = function (val) {
+    stack1.push(val);
+  };
+
+  this.dequeue = function () {
+    console.log('*********', stack1.head, stack2.head)
+    if(this.isEmpty()) return "Queue is empty!";
+    if(stack2.size === 0) {
+      while(stack1.size !== 0) stack2.push(stack1.pop());
+    }
+
+    return stack2.pop();
+  };
+
+  this.isEmpty = function () {
+    return (stack1.size === 0 && stack2.size === 0);
+  };
+
+  this.peek = function () {
+    if(this.isEmpty()) return "Queue is empty!";
+    return stack2.peek(); 
+  };
+
+  this.min = function () {
+    // body...
+  };
+
+  this.size = function () {
+    return stack1.size + stack2.size;
+  }
+
+};
 
