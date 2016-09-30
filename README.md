@@ -5,9 +5,11 @@ Practice algorithms.  Solutions are in solutions.js
 ### Usage
 
 1. Fork and clone down Broadstrokes/algopractice
-2. `bower install`
-3. Complete prompt(s)
-5. Run tests
+2. Make sure you've node and bower installed
+3. To install bower: npm install -g bower
+4. cd into the root folder of your cloned repo and run `bower install`
+5. Complete prompt(s) in the algorithms.js
+6. Run tests
 
 ~~~
 
