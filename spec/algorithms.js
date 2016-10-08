@@ -22,7 +22,7 @@ describe('reverseVowels', function () {
 
   it('should reverse only the vowels in a given string', () => {
     expect(reverseVowels("hello")).to.equal("holle");
-    expect(reverseString("leetcode")).to.equal("leotcede");  
+    expect(reverseVowels("leetcode")).to.equal("leotcede");  
   });
 }); //reverseVowels
 

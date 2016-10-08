@@ -4,16 +4,58 @@
 // Reverse the provided string.
 const reverseString = function (str) {
   // your code goes here
+  //basecase
+  return str.split('').reverse().join('')
 };
 
 // Reverse only the vowels in the provided string.
 const reverseVowels = function (str) {
-  // your code goes here
+  
+  let storage = {};
+  let returnArray = new Array(str.length);
+  let arr = str.split('');
+  let reversedVowel = [];
+  //populate object
+  arr.forEach(function(letter, index) {
+    if(letter !== 'a' && 
+    letter !== 'e' &&
+    letter !== 'i' &&
+    letter !== 'o' &&
+    letter !== 'u'
+    ){
+      storage[index]  = letter;
+    } else {
+      reversedVowel.push(letter);
+    }
+    
+    //reversedVowel = reversedVowel.reverse('');
+  
+  //loop thru object
+  for(let key in storage){
+    //place empty array with non vowels;
+    returnArray[key] = storage[key]
+  }
+  })
+reversedVowel = reversedVowel.reverse('');
+  //place vowels in returnArray
+  for(let i = 0; i < returnArray.length; i++){
+    let letter = returnArray[i] 
+    if(!letter){
+  
+      returnArray[i] = reversedVowel[0]
+      reversedVowel.splice(0,1)
+    }
+  }
+  return returnArray.join('').toString('')
 };
 
 // Factorialize a Number
 const factorialize = function (num) {
-  // your code goes here
+  if(num <= 0){
+    return 1;
+  }
+
+  return num * factorialize(num-1);
 };
 
 /*
@@ -21,6 +63,7 @@ Calculate the sum of two integers a and b, but you are not allowed to use the op
 */
 const getSum = function (a, b) {    
   // your code goes here
+
 };
 
 /*
@@ -28,7 +71,21 @@ Given an array of integers, return indices of the two numbers such that they add
 Because arr[0] + arr[1] = 2 + 7 = 9, return [0, 1].
 */
 const twoSum = function (arr, tgt) {
-  // your code goes here
+  let storage = {};
+  let result = [];
+  for(let i = 0; i <= arr.length -1; i++){
+    let currentNum = arr[i];
+    let neededValue = tgt - currentNum;
+    if(neededValue in storage){
+    
+      return [storage[neededValue], i];
+    } else {
+    
+      
+      storage[currentNum] = i;
+    }
+  }
+  return result
 };
 
 /*

@@ -14,6 +14,34 @@ const Node = function(val) {
 
 const Stack = function () {
   // your code goes here
+  // your code goes here
+  this.storage = [];
+  this.top = -1;
+  this.pop = function() {
+      if (this.top < 0) {
+          return 'Stack is empty!';
+      } else {
+
+          let returnVal = this.storage[this.top];
+          this.storage.pop();
+          this.top--;
+          return returnVal
+      }
+  };
+  this.push = function(val) {
+      this.storage.push(val);
+      this.top++
+  };
+  this.isEmpty = function() {
+      return this.top < 0 ? true : false;
+  };
+  this.peek = function() {
+      return this.top < 0 ? 'Stack is empty!' : this.storage[this.top];
+  };
+  this.min = function() {
+      return this.top < 0 ? 'Stack is empty!' : Math.min.apply(null, this.storage);
+  };
+
 };
 
 /*
