@@ -13,34 +13,35 @@ const Node = function(val) {
 */
 
 const Stack = function () {
-  // your code goes here
-  // your code goes here
-  this.storage = [];
-  this.top = -1;
+  
+  this.minArray = [];
+  this.size = -1;
   this.pop = function() {
-      if (this.top < 0) {
+      if (this.size < 0) {
           return 'Stack is empty!';
       } else {
 
-          let returnVal = this.storage[this.top];
-          this.storage.pop();
-          this.top--;
+          let returnVal = this.minArray[this.size];
+          this.minArray.pop();
+          this.size--;
           return returnVal
       }
   };
   this.push = function(val) {
-      this.storage.push(val);
-      this.top++
+      this.minArray.push(val);
+      this.size++
   };
   this.isEmpty = function() {
-      return this.top < 0 ? true : false;
+      return this.size < 0 ? true : false;
   };
   this.peek = function() {
-      return this.top < 0 ? 'Stack is empty!' : this.storage[this.top];
+      return this.size < 0 ? 'Stack is empty!' : this.minArray[this.size];
   };
   this.min = function() {
-      return this.top < 0 ? 'Stack is empty!' : Math.min.apply(null, this.storage);
+      return this.size < 0 ? 'Stack is empty!' : Math.min.apply(null, this.minArray);
   };
+
+
 
 };
 
@@ -51,5 +52,40 @@ const Stack = function () {
 */
 
 const Queue = function () {
-  // your code goes here
+  this.data = [];
+    this.size =  function () {
+      return this.data.length;
+    };
+    console.log(this.size)
+    
+    /*Enqueue adds to the end of the queue*/
+    this.enqueue = function(val) {
+  
+      this.data.push(val)
+          this.size++
+    };
+    /*dequeue removes from front of list*/
+    this.dequeue = function () {
+    
+    let returnNode = this.data[0]
+    this.data.shift();
+    
+    return returnNode;
+    }
+    /*checks if empty returns boolean value*/
+    this.isEmpty = function () {
+      return this.data.length === 0 ? true : false;
+    }
+    /*Returns the node at the front of the queue without removing*/
+    this.peek = function () {
+      if(this.isEmpty()){return 'Queue is empty!'}
+      let topNode = this.data[0];
+    
+      return topNode;
+    }
+    
+    this.min = function () {
+    if(this.isEmpty()) return 'Stack is empty!'
+    return Math.min.apply(null, this.data )
+    }
 };

@@ -101,6 +101,7 @@ const singleNumber = function (arr) {
 //it should take a string and repeat it a number of times
 const repeat = function (str, count) {
   // your code goes here
+  return count > 0 ? str.repeat(count) : null;
 };
 
 /*

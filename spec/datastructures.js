@@ -136,6 +136,7 @@ describe('Queue', function () {
 
   it('should dequeue the last item added', function () {
     //last item added was 2
+    console.log(myQueue)
     myQueue.enqueue(3);
     myQueue.enqueue(4);
     expect(myQueue.dequeue()).to.equal(1);
